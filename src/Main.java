@@ -3,6 +3,17 @@ import java.lang.reflect.*;
 public class Main {
     public static void main(String[] args) {
 
+        Drawable drawable = new Drawable() {
+            @Override
+            public void draw() {
+
+            }
+        };
+
+        Class classInfo = drawable.getClass();
+        System.out.println(classInfo.getName());
+        System.out.println(classInfo.isAnonymousClass());
+
         /*Holder h1 = new Holder(10);
         Class c1 = Holder.class;
         Class c2 = h1.getClass();
